@@ -1,0 +1,43 @@
+extends ../partials/nav 
+
+block content
+  .container
+    - if (products)
+      .row
+        .col-sm-6.col-md-6.col-md-offset-3.col-sm-offset-3
+          table 
+            tr
+                th Qty 
+                th Description 
+                th Price
+            each val in products
+              tr
+                td
+                    span.badge= val.qty
+                td
+                    strong= val.item.title
+                td
+                    span.label.label-success= val.price
+                //- btn-group allows us to create a button that acts as a dropdown
+                td
+                    .dropdown
+                      button(class="btn btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Action
+                        span.caret
+                      ul.dropdown-menu
+                        - console.log (val);
+                        li.dropdown-item.bg-white
+                          a(href='/reduce/'+val.item._id) Reduce by 1
+                        li.dropdown-item.bg-white
+                          a(href='/remove/'+val.item._id) Reduce by All
+      .row
+        .col-sm-6.col-md-6.col-md-offset-3.col-sm-offset-3
+          strong#totalLabel Total:
+          strong= totalPrice
+      hr
+      .row
+        .col-sm-6.col-md-6.col-md-offset-3.col-sm-offset-3
+          a(href="/checkout" type="button" class="btn") Checkout
+    - else
+      .row
+        .col-sm-6.col-md-6.col-md-offset-3.col-sm-offset-3
+          h2 No items in cart

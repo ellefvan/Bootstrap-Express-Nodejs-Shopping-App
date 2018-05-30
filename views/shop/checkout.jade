@@ -1,0 +1,50 @@
+extends ../partials/nav
+
+block content
+  .row
+    .col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4
+      h1 Checkout
+      h4= "Your Total: $" + total
+      - if (noError)
+        #charge-error(class="hidden")
+      - if (!noError)
+        #charge-error(class="alert alert-danger")= errMsg
+      form(action="/checkout", method="post", id="checkout-form")
+        .row
+          .col-12
+            .form-group
+              label(for="name") Name
+              input(type="text", id="name", class="form-control", required, name="name")
+        .row
+          .col-12
+            .form-group
+              label(for="address") Address
+              input(type="text", id="address", class="form-control", required, name="address")
+        .row
+          .col-12
+            .form-group
+              label(for="card-name") Card Holder Name
+              input(type="text", id="card-name", class="form-control", required)
+        .row
+          .col-12
+            .form-group
+              label(for="card-number") Credit Card Number
+              input(type="text", id="card-number", class="form-control", required)
+        .row
+            .col-6
+                .form-group
+                  label(for="card-expiry-month") Expiration Month
+                  input(type="text", id="card-expiry-month", class="form-control", required)
+            .col-6
+                .form-group
+                  label(for="card-expiry-year") Expiration Year
+                  input(type="text", id="card-expiry-year", class="form-control", required)
+        .row
+          .col-12
+            .form-group
+              label(for="card-cvc") CVC
+              input(type="text", id="card-cvc", class="form-control", required)
+        .row
+          button(type="submit", class="btn btn-success") Buy now
+    script(type="text/javascript", src="https://js.stripe.com/v2/")
+    script(type="text/javascript", src="javascripts/checkout.js")

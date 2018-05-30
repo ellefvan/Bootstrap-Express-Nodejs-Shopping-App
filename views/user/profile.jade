@@ -1,0 +1,17 @@
+extends ../partials/nav
+
+block content
+  .row
+    .col-md-8.col-md-offset-2
+      h1 User Profile
+      hr
+      h2 My Orders
+      each order in orders
+        .panel.panel-default
+          .panel-body
+            ul(class="list-group")
+              each it in order.cart.items
+                li(class="list-group-item")= it.item.title + " | " + it.qty + "Unit(s)"
+                  span(class="badge")= "$" + it.price
+          strong
+            .panel-footer= "Total Price: " + order.cart.totalPrice
