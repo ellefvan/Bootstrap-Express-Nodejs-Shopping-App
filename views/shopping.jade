@@ -1,6 +1,7 @@
-extends partials/left-nav
+extends partials/nav
 
 block content
+    include partials/left-nav
     - if (successMsg)
         .row
             .col-sm-6.col-sm-offset-3.col-md-4.col-md-offset-4
@@ -8,16 +9,15 @@ block content
     - if (!successMsg)
         .row
             #success.no-message
-     each val in products
-        .row
-          - for (var i = 0; i < 3; i++)
-            .col-sm-4.shoppingcards
-              .card
-                  - var url= val[i].imagePath;
-                  img(class="card-img-top img-responsive" src=url alt="Card image cap")
-                  .card-body
-                    a(href='/add-to-cart/'+val[i]._id class="btn btn-dark text-white" role="button") Add to Shopping Cart
-                    h3(class="card-title")= val[i].title
-                    .price= "$" + val[i].price + ".00"
-                    p(class="card-text")= val[i].description
+    .grid-container
+        each val in products
+            .shoppingcards
+                .card.grid-item
+                    - var url= val.imagePath;
+                    img(class="card-img-top img-responsive" src=url alt="Card image cap")
+                    .card-body
+                        a(href='/add-to-cart/'+val._id class="btn btn-dark text-white" role="button") Add to Shopping Cart
+                        h3(class="card-title")= val.title
+                        .price= "$" + val.price + ".00"
+                        p(class="card-text")= val.description
                 

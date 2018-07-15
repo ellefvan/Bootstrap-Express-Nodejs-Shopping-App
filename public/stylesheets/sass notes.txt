@@ -1,0 +1,6 @@
+Use installation guide from SASS website to install. Command line gave me an error after I installed & used sass --version
+So I installed node-sass instead:
+npm install -g node-sass
+
+compile the scss file with:
+node-sass [options] <input.scss> [output.css]

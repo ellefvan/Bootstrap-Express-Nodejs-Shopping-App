@@ -17,13 +17,14 @@ router.get('/', function(req, res, next) {
             console.log(err);
             return handleError(err);
         }
+        console.log(JSON.stringify(docs));
         var productChunks = [];
-        var chunkSize = 3;
+        var chunkSize = 1;
         for (var i = 0; i < docs.length; i += chunkSize) {
           productChunks.push(docs.slice(i, i+chunkSize));
         };
         res.render('shopping', 
-            {products: productChunks, successMsg: successMsg, noMessages: !successMsg});
+            {products: docs, successMsg: successMsg, noMessages: !successMsg});
     });
 });
 

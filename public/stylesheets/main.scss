@@ -1,0 +1,163 @@
+$primary-color: black;
+$secondary-color: white;
+
+body {
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    padding: 0px;
+}
+
+.nav.nav-fill li {
+    display: inline-block;
+    height: 25px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.navbar-brand {
+    font-size: 20px;
+    padding-top: 20px !important;
+}
+
+nav {
+.fas {
+    padding: 5px;
+}
+}
+
+span.badge {
+    margin-left: 5px;
+    border: 1px solid white;
+}
+
+nav {
+    margin: 0px;
+    background-color: $primary-color;
+    color: white;
+    padding: 20px;
+}
+
+#userDropdown {
+    background-color: $primary-color;
+    color: white;
+    padding: 0px;
+}
+
+#userDropdown li {
+    border-bottom: 1px solid white;
+    /* top/bottom, left/right */
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    text-align: center;
+    font-size: 28px;
+}
+
+#userDropdown a, #shoppingCartNav a {
+    color: $secondary-color;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#shoppingCartNav a {
+    padding: 6px 12px;
+    text-align: left;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+a {
+    color: #00B7FF;
+}
+
+#success.no-message {
+    height: 52px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-gap: 50px;
+}
+
+.card {
+    border: none;
+}
+
+.card-body {
+    padding-left: 10px;
+}
+.shoppingcards {
+    img {
+        max-width: 200px;
+    }
+
+    .btn, .card-title, .price {
+        margin-top: 5px;
+        margin-bottom: 0px;
+    }
+
+    .card-title {
+        font-size: 18px;
+    }
+    .card-text {
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+.left-nav {
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    overflow-x: hidden;
+}
+
+#left-nav-first-header {
+    margin-top: 52px; /*align with first card*/
+}
+
+.left-nav-header {
+    background-color: $primary-color;
+    color: $secondary-color;
+    padding: 20px;
+}
+
+.left-nav ul {
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+.left-menu-down-arrow {
+    padding-left: 5px;
+}
+
+.container {
+    margin-left: 250px;
+}
+
+.list-group-item * {
+    padding: 5px;
+}
+
+#totalLabel {
+    padding-right: 3px;
+}
+
+td a, td a:hover, td a:active {
+    color: $primary-color;
+}
+
+a.btn {
+    color: $primary-color;
+}
+
+.btn-success {
+    margin-bottom: 20px;
+}

@@ -3,9 +3,13 @@
     "",
     "\\public",
     "\\public\\stylesheets",
+    "\\routes",
+    "\\seed",
     "\\views",
-    "\\views\\partials"
+    "\\views\\partials",
+    "\\views\\shop",
+    "\\views\\user"
   ],
-  "SelectedNode": "\\public\\stylesheets\\style.css",
+  "SelectedNode": "\\public\\stylesheets\\main.scss",
   "PreviewInSolutionExplorer": false
 }

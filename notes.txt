@@ -1,0 +1,35 @@
+Installed Visual Studio
+
+Installed mongdb
+
+
+express shopping-cart to create app with pugjs
+
+express shopping-cart --hbs to create app with handlebars
+
+npm start to start app
+
+Ctrl + C to stop it
+
+
+Create nav & index jade files
+Get shopping cart and user icons frm FontAwesome
+
+Edit style.css file under public -> stylesheets
+
+npm install --save mongoose
+
+import mongoose (require) in app.js file 
+then connect to mongoose in app.js (mongoose.connect())
+
+create Models folder then create product model
+
+create seed file and product-seeder.js file
+
+create all model folders
+
+create user views
+
+create index.js file in routes
+& loop through products in index.jade views file
+We installed locus (npm install locus) to figure out where Express is sending query requests.

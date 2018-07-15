@@ -1,0 +1,23 @@
+.left-nav
+    h5(id="left-nav-first-header" class="left-nav-header" data-toggle="collapse" href="#collapsePrice") Price
+        span(class="fas fa-angle-down left-menu-down-arrow", aria-hidden="true")
+    ul(class="nav flex-column collapse" id="collapsePrice")
+        li(class="nav-item")
+            a(href='/cards/price/'+0) Under $5
+        li(class="nav-item")
+            a(href='/cards/price/'+5) $5 - $9.99
+        li(class="nav-item")
+            a(href='/cards/price/'+10) $10 and Over
+    //- To be implemented later
+        h5(class="left-nav-header" data-toggle="collapse" href="#collapseType") Type
+            span(class="fas fa-angle-down left-menu-down-arrow", aria-hidden="true")
+        ul(class="nav flex-column collapse" id="collapseType") 
+            li(class="nav-item")
+                input(type="checkbox") 
+                | Normal
+            li(class="nav-item")
+                input(type="checkbox") 
+                | Water
+            li(class="nav-item")
+                input(type="checkbox") 
+                | Psychic

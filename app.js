@@ -15,10 +15,11 @@ var MongoStore = require('connect-mongo')(session);
 
 var index = require('./routes/index');
 var user = require('./routes/user');
+var cards = require('./routes/cards');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost/test');
+mongoose.connect('mongodb://localhost/test').then(() => { console.log("Connected to mongodb.")}).catch((err) => {console.log(err)});
 //run passport config file
 require('./config/passport');
 
@@ -30,7 +31,7 @@ app.set('view engine', 'jade');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 /**need to initialize after bodyParser has been set up
  * will take the parameters you want to validate from submitted
  *  request body (from bodyParser)
@@ -75,6 +76,7 @@ app.use(function (req, res, next) {
 });
 app.use('/', index);
 app.use('/user', user);
+app.use('/cards', cards)
 /**Academind says that / should always be listed last, bc
  * the server will use the route in order
  */
