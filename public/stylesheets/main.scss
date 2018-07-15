@@ -79,11 +79,20 @@ a {
     height: 52px;
 }
 
+
+
 .grid-container {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-column-gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem; }
+
+
+
+.grid-item {
+  display: flex;
 }
+
+.
 
 .card {
     border: none;
