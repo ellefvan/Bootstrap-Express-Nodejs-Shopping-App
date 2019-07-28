@@ -1,3 +1,5 @@
+** This project was created before I began school at NC State, so it does not include proper JavaDoc and does not follow other style guidelines. **
+
 # Bootstrap-Express-Nodejs-Shopping-App
 This is a shopping website created using Bootstrap, Express, Node.js and Jade.
 
